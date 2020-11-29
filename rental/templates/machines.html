@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block 'body' %}
+{% load static %}
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="{% static 'javascript.js' %}" type="text/javascript"></script>
+<div id="machines_div">
+    <table>
+        <tr>
+            <th>Carpet Cleaner</th>
+            <th>Dehumidifier</th>
+        </tr>
+        <tr>
+            <td><a href=""><img class="machine_image" src="{% static 'carpet_cleaner.jpg' %}" ></a></td>
+            <td><a href=""><img class="machine_image" src="{% static 'dehumidifier.jpg' %}" ></a></td>
+        </tr>
+        <tr>
+            <th>Carpet Cleaner</th>
+            <th>Dehumidifier</th>
+        </tr>
+        <tr>
+            <td><a href=""><img class="machine_image" src="{% static 'carpet_cleaner.jpg' %}" ></a></td>
+            <td><a href=""><img class="machine_image" src="{% static 'dehumidifier.jpg' %}" ></a></td>
+        </tr>
+    </table>
+</div>
+<div id="machine_description">
+
+</div>
+{% endblock %}
