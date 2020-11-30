@@ -16,12 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rental import views
+from . import settings
+from django.conf.urls.static import static
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('machines', views.machines, name='machines'),
+    path('machine/<int:machine_id>', views.machine, name='machine'),
     path('contact', views.contact, name='contact'),
     path('order', views.order, name='order'),
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

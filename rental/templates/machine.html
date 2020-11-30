@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block 'body' %}
+<div id="machine_div">
+    <h2>{{ machine_.machine_name }}</h2>
+    <p>{{ machine_.machine_info }}</p>
+    <p style="font-weight:bold; font-size: 20px">Prices:</p>
+    <table>
+        <tr>
+            <th style="text-align: left">Item</th>
+            <th style="text-align: left">Price (HUF)</th>
+            <th style="text-align: left; padding-left: 15px">Price Information</th>
+        </tr>
+        {% for price in prices %}
+            <tr>
+                <td style="text-align: left">{{ price.item }}</td>
+                <td style="text-align: right">{{ price.price }}</td>
+                <td style="text-align: left; padding-left: 15px">{{ price.price_info }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

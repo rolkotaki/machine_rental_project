@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Contact, Machine, Price
 
-# Register your models here.
+
+admin.site.register(Contact)
+admin.site.register(Machine)
+admin.site.register(Price)
